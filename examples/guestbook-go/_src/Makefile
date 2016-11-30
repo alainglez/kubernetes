@@ -16,9 +16,9 @@
 
 # Usage:
 #   [VERSION=v3] [REGISTRY="gcr.io/google_containers"] make build
-VERSION?=v4
+VERSION?=v5
 #REGISTRY?=gcr.io/google_containers
-REGISTRY?=alainglez
+REGISTRY?=docker.io/alainglez
 
 release: clean build push clean
 
@@ -30,7 +30,7 @@ build:
 # push the image to an registry
 push:
 #	gcloud docker -- push ${REGISTRY}/guestbook:${VERSION}
-docker push ${REGISTRY}/guestbook-go:${VERSION}
+  docker push ${REGISTRY}/guestbook-go:${VERSION}
 
 # remove previous images and containers
 clean:

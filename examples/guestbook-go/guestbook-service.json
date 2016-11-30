@@ -17,6 +17,7 @@
       "selector":{
          "app":"guestbook"
       },
+      "loadBalancerIP" : "192.168.5.20",
       "type": "LoadBalancer"
    }
 }
